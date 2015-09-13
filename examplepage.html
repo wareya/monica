@@ -68,12 +68,34 @@ div.stroke {
 hr {
  border-bottom-color: white;
 }
+.main {
+ min-height: 420px;
+ position: relative;
+}
+.main button {
+ position: absolute; 
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 12px;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
 </style>
+<script>
+function flip()
+{
+    document.getElementById("show").style.display = "none";
+    document.getElementById("back").style.display = "initial";
+}
+</script>
     <div class=main>
         <div>{{ deckname }}</div>
         <div class=kanji>{{ kanji }}</div>
-        <div class=small>{{ index }}</div>
-
+        
+        <div id="show"><button onclick="flip()">Show</button></div>
+        
+        <section id="back" style="display:none">
         <hr id=answer>
 
         <div class=small>{{ kanji }}</div>
@@ -83,6 +105,7 @@ hr {
         <form action="" method="post">
             <button name="docard" value="{{ UID }}">Next</button>
         </form>
+        </section>
     </div>
 </body>
 </html>
