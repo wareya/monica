@@ -1,0 +1,12 @@
+root=42 a=word b="quoted string" c="text line" d=1 d=2 d=3
+  :test 1
+  :test 2
+  node
+    :line 1
+    :line 2
+    leaf=true
+
+root=24
+  node
+    leaf=true
+

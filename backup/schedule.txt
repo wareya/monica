@@ -1,0 +1,5 @@
+card UID=154
+  interval:2
+
+card UID=192
+  interval:4

@@ -1,0 +1,12 @@
+variables
+  background: #eef
+  color: #000
+
+body
+  background: var(background)
+  color: var(color)
+
+p
+  color: var(color)
+
+include include.cml

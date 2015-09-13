@@ -1,0 +1,51 @@
+# Document Markup Language => dml
+# 2014-11-06
+############
+
+*This* /is/ _how_ ~it~ |should| {be}.
+
+- Example Code
+-- For Instance => dml
+- Magic Header
+- Embedding
+
+* A
+** 1
+** 2
+** 3
+* B
+* C
+* D
+
+== Example |Code|
+=================
+
+<include include.dml>
+
+  #include <stdio.h>
+  
+  int main() {
+    return 0;
+  }
+
+=== For Instance
+================
+
+---
+
+== Embedding => 2014-11-04
+==========================
+
+<html>
+  <!-- info -->
+  <div>
+    <img src="">
+  </div>
+
+>>> test1
+>> test2
+> test3
+
+Visit me at [/other/about/ => about] today.
+
+This is [<a-picture.png> => a picture]!

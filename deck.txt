@@ -1,0 +1,21 @@
+meta
+  name:Joyo Kanji 2015
+  desc:
+  template:examplepage.html
+  good:200%
+  failure:25%
+  bonus:125%
+  ease:100%
+  baseinterval:1
+  hourslate:5
+  iterator:234
+
+card UID=155
+  kanji:京
+  concept:capital
+  index:154
+
+card UID=192
+  kanji:知
+  concept:know
+  index:187

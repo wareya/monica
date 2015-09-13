@@ -1,0 +1,11 @@
+modes:
+
+reps needed
+reps done
+
+
+- table of cards
+-- unique identifier on import
+-- not a naive hash. can have unique identical cards
+- table of scheduling information
+-- seenness, current interval, highest interval, leech/bury status and date
