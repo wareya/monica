@@ -5,14 +5,6 @@
     <title>Monica Spaced Repetition</title>
 </head>
 <body>
-
-<script>
-function flip()
-{
-    document.getElementById("show").style.display = "none";
-    document.getElementById("back").style.display = "initial";
-}
-</script>
     <div class=main>
         <div>{{ deckname }}</div>
         <div class=kanji>{{ kanji }}</div>
@@ -31,5 +23,13 @@ function flip()
         </form>
         </section>
     </div>
+
+    <script>
+     function flip()
+     {
+         document.getElementById("show").style.display = "none";
+         document.getElementById("back").style.display = "initial";
+     }
+    </script>
 </body>
 </html>
