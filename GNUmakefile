@@ -1,12 +1,9 @@
+threaded=true
 include nall/GNUmakefile
 
 flags += -I. -O3
 
-ifeq ($(platform),windows)
-  link += -mconsole
-endif
-
-all: monica.exe
+all: monica
 
 monica.o: monica.cpp
 	$(compiler) $(cppflags) $(flags) -c monica.cpp -o monica.o
@@ -14,6 +11,6 @@ monica.o: monica.cpp
 template.o: NLTemplate/NLTemplate.cpp
 	$(compiler) $(cppflags) $(flags) -c NLTemplate/NLTemplate.cpp -o template.o
 
-monica.exe: monica.o template.o
-	$(compiler) $(flags) monica.o template.o -o monica.exe $(link)
+monica: monica.o template.o
+	$(compiler) $(flags) monica.o template.o -o monica $(link)
 

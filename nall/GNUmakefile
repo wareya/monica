@@ -88,8 +88,7 @@ endif
 # threading support
 ifeq ($(threaded),true)
   ifneq ($(filter $(platform),linux bsd),)
-    flags += -pthread
-    link += -lrt
+    link += -lrt -lpthread
   endif
 endif
 
