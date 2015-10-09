@@ -5,32 +5,66 @@
     <title>Monica Spaced Repetition</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+     .card {
+         text-align: center;
+         background-color: #F8F8F8;
+         border-radius: 1em;
+     }
+
+     .answer-section {
+         display: none;
+     }
+     
+     .kanji-large {
+         font-size: 8em;
+     }
+     
+     .kanji-stroke {
+         font-family: KanjiStrokeOrders;
+     }
+    </style>
 </head>
 <body>
-    <div class="main">
-        <div>{{ deckname }}</div>
-        <div class="kanji">{{ kanji }}</div>
-        
-        <div id="show"><button onclick="flip()">Show</button></div>
-        
-        <section id="back" style="display:none">
-        <hr id="answer">
+    <main class="container">
+        <div class="row">
+            <div class="card col-md-offset-4 col-md-4">
+                <div class="row" >
+                    <div class="col-xs-12" >
+                        <h3>{{ deckname }}</h3>
+                        <div class="kanji-large">{{ kanji }}</div>
 
-        <div class="small">{{ kanji }}</div>
-        <span>{{ concept }}</span>
-        <div class="stroke">{{ kanji }}</div>
-        
-        <form action="" method="post">
-            <button name="docard" value="{{ UID }}">Next</button>
-        </form>
-        </section>
-    </div>
+                    </div>
+                </div>
+                
+                <div class="btn-show">
+                    <button class="btn btn-primary" onclick="flip()">Show</button>
+                </div>
+
+                <div class="answer-section clearfix" class="row" >
+                    <div class="col-xs-12" >
+                        
+                        <hr>
+
+                        <div >{{ kanji }}</div>
+                        <span>{{ concept }}</span>
+                        <div class="kanji-large kanji-stroke">{{ kanji }}</div>
+                        
+                        <form action="" method="post">
+                            <button class="btn btn-primary" name="docard" value="{{ UID }}">Next</button>
+                        </form>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </main>
 
     <script>
      function flip()
      {
-         document.getElementById("show").style.display = "none";
-         document.getElementById("back").style.display = "initial";
+         document.querySelector(".btn-show").style.display = "none";
+         document.querySelector(".answer-section").style.display = "initial";
      }
     </script>
 </body>
