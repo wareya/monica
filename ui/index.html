@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Monica Spaced Repetition</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+     body,html {
+         background-color: #F8F8F8;
+     }
+     
+     .card {
+         text-align: center;
+     }
+
+     .navigation .right {
+         text-align: right;
+     }
+
+     .navigation .left {
+         text-align: left;
+     }
+
+     .answer-section,.btn-answer {
+         display: none;
+     }
+     
+     .kanji-large {
+         font-size: 8em;
+     }
+     
+     .kanji-stroke {
+         font-family: KanjiStrokeOrders;
+     }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="card col-md-offset-4 col-md-4">
+                <div class="row" >
+                    <div class="col-xs-12" >
+                        <h3>{{ deckname }}</h3>
+                        <div class="kanji-large">{{ kanji }}</div>
+                    </div>
+                </div>
+                
+                <div class="navigation row">
+                    <div class="col-md-6 left" >
+                    </div>
+                    <div class="col-md-6 right" >
+                        <button class="btn-show btn btn-primary" onclick="flip()">Show</button>
+
+                        <form class="btn-answer" action="" method="post">
+                            <button class="btn btn-primary" name="docard" value="{{ UID }}">Next</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="answer-section clearfix" class="row" >
+                    <div class="col-xs-12" >
+                        
+                        <hr>
+
+                        <div >{{ kanji }}</div>
+                        <span>{{ concept }}</span>
+                        <div class="kanji-large kanji-stroke">{{ kanji }}</div>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </main>
+
+    <script>
+     function flip()
+     {
+         document.querySelector(".btn-show").style.display = "none";
+         document.querySelector(".btn-answer").style.display = "initial";
+         document.querySelector(".answer-section").style.display = "initial";
+     }
+    </script>
+</body>
+</html>

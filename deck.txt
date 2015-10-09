@@ -1,7 +1,7 @@
 meta
   name:Joyo Kanji 2015
   desc:
-  template:examplepage.html
+  template:ui/index.html
   good:200%
   failure:25%
   bonus:125%
