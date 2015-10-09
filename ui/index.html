@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Monica Spaced Repetition</title>
+</head>
+<body>
+
+<script>
+function flip()
+{
+    document.getElementById("show").style.display = "none";
+    document.getElementById("back").style.display = "initial";
+}
+</script>
+    <div class=main>
+        <div>{{ deckname }}</div>
+        <div class=kanji>{{ kanji }}</div>
+        
+        <div id="show"><button onclick="flip()">Show</button></div>
+        
+        <section id="back" style="display:none">
+        <hr id=answer>
+
+        <div class=small>{{ kanji }}</div>
+        <span>{{ concept }}</span>
+        <div class=stroke>{{ kanji }}</div>
+        
+        <form action="" method="post">
+            <button name="docard" value="{{ UID }}">Next</button>
+        </form>
+        </section>
+    </div>
+</body>
+</html>
